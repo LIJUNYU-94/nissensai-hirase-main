@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="./js/common.js" defer></script>
+    <title>2024日専祭</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img class="header-logo" src="img/header-logo.svg" alt="日専祭2024"
+      /></a>
+
+      <nav class="pc-nav" id="pc-only">
+        <ul>
+          <li class="pc-nav-active"><a href="index.html">TOP</a></li>
+          <li class="pc-nav-li"><a href="greeting/index.html">ご挨拶</a></li>
+          <li class="pc-nav-li">
+            <a href="member/index.html">制作者紹介</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- ハンバーガメニュー スマホonly -->
+      <div class="menu_icon" id="phone-only">
+        <div class="menu_icon-line linea"></div>
+        <div class="menu_icon-line lineb"></div>
+        <div class="menu_icon-line linec"></div>
+      </div>
+
+      <nav class="phone-nav" id="phone-only">
+        <ul>
+          <li><a href="">開催情報</a></li>
+          <li><a href="">キャッチフレーズ</a></li>
+          <li><a href="">キャラクター紹介</a></li>
+          <li><a href="">展示・出店</a></li>
+          <li><a href="">声優トークショー</a></li>
+          <li><a href="">実行委員企画</a></li>
+          <li><a href="">注意事項</a></li>
+        </ul>
+        <ul>
+          <li><a href="greeting/index.html">ごあいさつ</a></li>
+          <li><a href="member/index.html">制作者紹介</a></li>
+          <li id="hp-link">
+            <a href="https://www.jec.ac.jp/">日本電子専門学校公式ページ</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section__keyvisual">
+        <div class="keyvisual_logo">
+          <img src="./img/logo.png" alt="日専祭2024ロゴ" />
+        </div>
+        <div class="keyvisual_light">
+          <img src="./img/lights.svg" alt="ライト" />
+        </div>
+        <div class="keyvisual_catchphrase">
+          <img src="./img/catchphrase.png" alt="キャッチフレーズ" />
+        </div>
+        <div class="keyvisual_rocket">
+          <img src="./img/rocket.png" alt="ロケット" />
+        </div>
+        <div class="keyvisual_smoke">
+          <img src="./img/kemuri.png" alt="煙" />
+        </div>
+        <section class="section__event">
+          <h2 class="section__ttl">
+            <img src="./img/ttl/ttl_event.svg" alt="開催にあたって" />
+          </h2>
+          <div class="btn__container">
+            <a class="btn btn--gradation">理事長校長のご挨拶</a>
+            <a class="btn btn--simple">制作者紹介</a>
+          </div>
+        </section>
+      </section>
+      <section class="section__catchphrase" id="catchphrase">
+        <h2 class="section__ttl">
+          <img src="./img/ttl/ttl_catchphrase.svg" alt="キャッチフレーズ" />
+        </h2>
+        <picture class="section__catchphrase-img">
+          <img src="./img/catchphrase.png" alt="今しか作れない明日がある" />
+        </picture>
+        <p class="section__catchphrase-text">
+          コンセプトの"明日も行きたい日専祭"から、<br />
+          学生側にスポットを当てました。<br />
+          「創る」という字は新しいものを生み出すということを意味しています。<br />
+          令和6年度の学生にしか生み出せない日専祭になって欲しいという思いと、<br />
+          自分達が創り出した「明日」をまた見に行きたいとご来場者及び学生に感じて欲しいという思いも込めました。
+        </p>
+      </section>
+      <section class="section__character">
+        <h2 class="section__ttl">
+          <img src="./img/ttl/ttl_character.svg" alt="新キャラクターの紹介" />
+        </h2>
+        <p class="section__character-text">今年度からのキャラクター</p>
+        <p class="section__character-text section__character-text--bold">
+          『でんちゃん』
+        </p>
+        <picture class="section__character-img">
+          <img
+            src="./img/denchan.png"
+            alt="でんちゃん"
+            width="250"
+            height="320"
+          />
+        </picture>
+        <div class="btn__container">
+          <a class="btn btn--gradation">詳しく見る</a>
+        </div>
+      </section>
+      <section class="section__stalls">
+        <div class="section__stalls-contents">
+          <h2 class="section__ttl">
+            <img src="./img/ttl/ttl_stalls.svg" alt="" />
+          </h2>
+          <p class="section__stalls-text">
+            <span>日専祭では、</span><br />
+            本館、4号館、5号館、7号館、9号館にわかれ、<br />展示や体験型のワークショップ等を行っています。<br />是非、お楽しみください
+          </p>
+          <picture class="section__stalls-img">
+            <img src="./img/access.png" alt="会場図" />
+          </picture>
+        </div>
+        <div class="section__stalls-exhibition">
+          <div class="section__stalls-container">
+            <ul class="section__stalls-list">
+              <li
+                class="section__stalls-btn section__stalls-btn--info"
+                data-target="B1"
+              >
+                本館
+              </li>
+              <li
+                class="section__stalls-btn section__stalls-btn--info active"
+                data-target="B7"
+              >
+                ７号館
+              </li>
+              <li class="section__stalls-btn" data-target="B9">９号館</li>
+              <li class="section__stalls-btn" data-target="B5">５号館</li>
+              <li class="section__stalls-btn" data-target="B4">４号館</li>
+            </ul>
+          </div>
+          <div class="section__stalls-info">
+            <ul>
+              <li>771教室 Webデザイン科制作物</li>
+              <li>772教室Webデザイン グラフィックチーム</li>
+              <li>771教室 Webデザイン科制作物</li>
+              <li>772教室Webデザイン グラフィックチーム</li>
+              <li>771教室 Webデザイン科制作物</li>
+              <li>772教室Webデザイン グラフィックチーム</li>
+              <li>771教室 Webデザイン科制作物</li>
+              <li>772教室Webデザイン グラフィックチーム</li>
+            </ul>
+          </div>
+          <div class="swiper">
+            <div class="section__stalls-current">
+              <div class="swiper-button-prev"></div>
+              <p>7F</p>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div id="B7" class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture class="slide__img">
+                  <img src="./img/ozakiyuka.png" alt="" />
+                </picture>
+                <div class="slide__container">
+                  <span class="slide__place">7階771教室</span>
+                  <p class="slide__ttl">Webデザイン科制作物</p>
+                  <p class="slide__txt">
+                    Webデザイン科の学生が制作したWebサイト、
+                    アプリケーション、イラストなどが展示されています。Webデザイン科の
+                    学生が制作したWebサイト、
+                    アプリケーション、イラストなどが展示されています。
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/7171.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/7172.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/7772.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="section__voiceactor">
+        <h2 class="section__ttl">
+          <img src="./img/ttl/ttl_voiceactor.svg" alt="" />
+        </h2>
+        <div class="section__voiceactor-content">
+          <picture class="section__voiceactor-img">
+            <img src="./img/ozakiyuka.png" alt="声優の画像" />
+          </picture>
+          <ul class="section__voiceactor-list">
+            <li class="section__voiceactor-item">今年度は事前予約制です。</li>
+            <li class="section__voiceactor-item">
+              近隣にご迷惑がかからないように列のご案内は13時30分ごろからとなりますので、事前にお並びいただかないようご配慮願います。
+            </li>
+            <li class="section__voiceactor-item">
+              会場内のご飲食及びカメラやスマート<br />
+              フォンなどでの撮影や録画、音声の録音は禁止とさせていただきます。
+            </li>
+          </ul>
+          <a class="btn btn--gradation">予約する</a>
+        </div>
+      </section> -->
+      <section class="section__executiveplan">
+        <h2 class="section__ttl">
+          <img src="./img/ttl/ttl_executiveplan.svg" alt="実行委員企画" />
+        </h2>
+        <div class="section__executiveplan-content">
+          <h3 class="section__executiveplan-img">
+            <img src="./img/photo_quiz.svg" alt="" />
+          </h3>
+          <div class="section__executiveplan-play">
+            <p class="section__executiveplan-heading">あそびかた</p>
+            <p class="section__executiveplan-text">
+              ヒントをたよりに写真を並びかえてね！！<br />
+              答えは本館４階の受付の人につたえてね！<br />
+              正解したらガチャをまわせるよ！<br />
+              もしかしたら豪華景品があたるかも！
+            </p>
+          </div>
+          <div class="section__executiveplan-prize">
+            <p class="section__executiveplan-heading">景品</p>
+            <ul class="section__executiveplan-list">
+              <li class="section__executiveplan-item">ゲームソフト</li>
+              <li class="section__executiveplan-item">モバイル充電器</li>
+              <li class="section__executiveplan-item">ボードゲーム</li>
+              <li class="section__executiveplan-item">参加賞</li>
+            </ul>
+          </div>
+          <div class="section__executiveplan-hint">
+            <p class="section__executiveplan-heading">ヒント</p>
+            <ul class="section__executiveplan-grid">
+              <li class="section__executiveplan-gitem">７号館５階</li>
+              <li class="section__executiveplan-gitem">７号館６階</li>
+              <li class="section__executiveplan-gitem">７号館４階</li>
+              <li class="section__executiveplan-gitem">本館７階</li>
+              <li class="section__executiveplan-gitem">本館B1階</li>
+              <li class="section__executiveplan-gitem">
+                この階にはヒントが二つあるよ
+              </li>
+              <li class="section__executiveplan-gitem">合計８つだよ!!</li>
+            </ul>
+          </div>
+          <p class="section__executiveplan-heading">
+            答え合わせ、質問は<br />本館４階のキャリアセンターまで
+          </p>
+        </div>
+      </section>
+      <section class="section__precautions">
+        <h2 class="section__ttl">
+          <img src="./img/ttl/ttl_precautions.svg" alt="注意事項" />
+        </h2>
+        <div class="section__precautions-content">
+          <div class="section__precautions-container">
+            <div class="section__precautions-attention">
+              <p class="section__precautions-heading">
+                皆様に快適にお過ごしいただくために、
+                <br />いくつかお願いがございます。
+                <br />ご協力のほどお願い申し上げます。
+              </p>
+              <ul class="section__precautions-list">
+                <li class="section__precautions-item">
+                  喫煙は灰皿が置いてある所定の場所でお願いいたします。(7号館3階バルコニー・10号館外休憩所)
+                </li>
+                <li class="section__precautions-item">
+                  実習室での飲食はご遠慮ください。
+                </li>
+                <li class="section__precautions-item">
+                  怪我をされた場合や体調を悪くされた方は、本館の保健室をご利用ください。
+                </li>
+                <li class="section__precautions-item">
+                  校舎の備品、壁、展示物を破損された場合は、日専祭実行委員にお知らせください。（実行本部
+                  4号館1階1番教室）
+                </li>
+                <li class="section__precautions-item">
+                  災害時、緊急の事態が発生した場合は、日本電子専門学校教職員の指示に従ってください。
+                </li>
+                <li class="section__precautions-item">
+                  ポイ捨ては厳禁です。ゴミは分別して専用のゴミ箱へ捨ててください。また食べ歩きはご遠慮ください。
+                </li>
+                <li class="section__precautions-item">
+                  校内外の環境美化にご協力ください。
+                </li>
+                <li class="section__precautions-item">
+                  東京都新宿区内全域で路上喫煙は禁止されています。ご注意ください。
+                </li>
+              </ul>
+            </div>
+            <div class="section__precautions-attention">
+              <p class="section__precautions-heading">食中毒防止のご案内</p>
+              <ul class="section__precautions-list">
+                <li class="section__precautions-item">
+                  出店団体で提供している食品は、提供されてからお早めにお召し上がりください。
+                </li>
+                <li class="section__precautions-item">
+                  飲食可能となっている、本館4階オープンスペース、7号館2階コミュニケーションスペースの入口付近及び各号館の入口には、消毒用アルコールが置いてありますのでご自由にお使いください。飲食可能スペースの位置は配布用パンフレット裏表紙の校舎マップ及びp.13～p.29の詳細マップをご覧ください。
+                </li>
+                <li class="section__precautions-item">
+                  飲食後に発生したゴミは指定のゴミ箱に捨てるようお願い申し上げます。また、環境保護のため、ゴミの分別を実施しておりますのでご協力をお願いいたします。ゴミ箱の設置位置は配布用パンフレットp.13～p.29の詳細マップをご覧ください。
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <p class="footer-logo">
+          <a href="index.html"
+            ><img src="./img/footer-logo.svg" alt="日専祭2024"
+          /></a>
+        </p>
+
+        <ul class="footer-ul footer-ul-ul1">
+          <li><a href="">開催情報</a></li>
+          <li><a href="">キャッチフレーズ</a></li>
+          <li><a href="">キャラクター紹介</a></li>
+          <li><a href="">展示・出展</a></li>
+          <li><a href="">声優トークショー</a></li>
+          <li><a href="">実行委員企画</a></li>
+          <li><a href="">注意事項</a></li>
+        </ul>
+        <ul class="footer-ul footer-ul-ul2">
+          <li><a href="greeting/index.html">- ごあいさつ -</a></li>
+          <li><a href="member/index.html">- 制作者紹介 -</a></li>
+        </ul>
+
+        <a href="https://www.jec.ac.jp/">
+          <img
+            class="hpbtn"
+            src="./img/hpbtn.svg"
+            alt="ホームページへのリンク"
+          />
+        </a>
+
+        <small
+          >&copy; Japan Electronics College. <br />
+          All Rights Reserved.</small
+        >
+      </div>
+    </footer>
+    <img class="backtotop" src="./img/btn-white.png" alt="backtotop" />
+  </body>
+</html>

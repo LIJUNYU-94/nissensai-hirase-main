@@ -1,0 +1,81 @@
+      <header>
+          <a href="../index.html">
+            <img
+              class="header-logo"
+              src="../img/header-logo.svg"
+              alt="日専祭2024"
+          /></a>
+          <nav class="pc-nav" id="pc-only">
+            <ul>
+              <li class="pc-nav-li"><a href="../index.html">TOP</a></li>
+              <li class="pc-nav-li">
+                <a href="../greeting/index.html">ご挨拶</a>
+              </li>
+              <li class="pc-nav-active"><a href="index.html">制作者紹介</a></li>
+            </ul>
+          </nav>
+          <!-- ハンバーガメニュー スマホonly -->
+          <div class="menu_icon" id="phone-only">
+            <div class="menu_icon-line linea"></div>
+            <div class="menu_icon-line lineb"></div>
+            <div class="menu_icon-line linec"></div>
+          </div>
+        <nav class="phone-nav" id="phone-only">
+          <ul>
+            <li><a href="">開催情報</a></li>
+            <li><a href="">キャッチフレーズ</a></li>
+            <li><a href="">キャラクター紹介</a></li>
+            <li><a href="">展示・出店</a></li>
+            <li><a href="">声優トークショー</a></li>
+            <li><a href="">実行委員企画</a></li>
+            <li><a href="">注意事項</a></li>
+          </ul>
+          <ul>
+            <li><a href="../greeting/index.html">ごあいさつ</a></li>
+            <li><a href="index.html">制作者紹介</a></li>
+            <li id="hp-link">
+              <a href="https://www.jec.ac.jp/">日本電子専門学校公式ページ</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- ハンバーガメニュー スマホonly -->
+      </header>
+      
+      <footer>
+        <div class="footer-container">
+          <p class="footer-logo">
+            <a href="../index.html"
+              ><img src="../img/footer-logo.svg" alt="日専祭2024"
+            /></a>
+          </p>
+
+          <ul class="footer-ul footer-ul-ul1">
+            <li><a href="">開催情報</a></li>
+            <li><a href="">キャッチフレーズ</a></li>
+            <li><a href="">キャラクター紹介</a></li>
+            <li><a href="">展示・出展</a></li>
+            <li><a href="">声優トークショー</a></li>
+            <li><a href="">実行委員企画</a></li>
+            <li><a href="">注意事項</a></li>
+          </ul>
+          <ul class="footer-ul footer-ul-ul2">
+            <li><a href="../greeting/index.html">- ごあいさつ -</a></li>
+            <li><a href="../member/index.html">- 制作者紹介 -</a></li>
+          </ul>
+
+          <a href="https://www.jec.ac.jp/">
+            <img
+              class="hpbtn"
+              src="../img/hpbtn.svg"
+              alt="ホームページへのリンク"
+            />
+          </a>
+
+          <small
+            >&copy; Japan Electronics College. <br />
+            All Rights Reserved.</small
+          >
+        </div>
+      </footer>
+      <img class="backtotop" src="../img/btn-white.png" alt="backtotop" />
