@@ -42,6 +42,16 @@ menuBtn.addEventListener("click", function () {
   menuLinec.classList.toggle("open");
   nav.classList.toggle("open");
 }); //スマホナビゲーションの動き
+const links = nav.querySelectorAll("a");
+links.forEach((link) => {
+  link.addEventListener("click", function () {
+    nav.classList.remove("open"); // リンクがクリックされたらナビゲーションを閉じる
+    menuLinea.classList.remove("open");
+    menuLineb.classList.remove("open");
+    menuLinec.classList.remove("open");
+  });
+});
+//スマホのリンクを押されたらnavの.openを外す　（やり方あってる？）
 const fixedBox = document.createElement("div");
 fixedBox.className = "fixedbox";
 document.body.appendChild(fixedBox);
