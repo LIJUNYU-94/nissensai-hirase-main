@@ -1,11 +1,32 @@
-      <header>
+<div class="swiper-slide">
+                <picture class="slide__img">
+                  <img src="./img/dantai/" alt="" />
+                </picture>
+                <div class="slide__container">
+                  <span class="slide__place">7階771教室</span>
+                  <p class="slide__ttl">Webデザイン科制作物</p>
+                  <p class="slide__txt">
+                    Webデザイン科の学生が制作したWebサイト、
+                    アプリケーション、イラストなどが展示されています。Webデザイン科の
+                    学生が制作したWebサイト、
+                    アプリケーション、イラストなどが展示されています。
+                  </p>
+                </div>
+              </div>
+    
+    
+    
+    
+    
+    
+     <header>
           <a href="../index.html">
             <img
               class="header-logo"
               src="../img/header-logo.svg"
               alt="日専祭2024"
           /></a>
-          <nav class="pc-nav" id="pc-only">
+          <nav class="pc-nav" class="pc-only">
             <ul>
               <li class="pc-nav-li"><a href="../index.html">TOP</a></li>
               <li class="pc-nav-li">
@@ -15,12 +36,12 @@
             </ul>
           </nav>
           <!-- ハンバーガメニュー スマホonly -->
-          <div class="menu_icon" id="phone-only">
+          <div class="menu_icon" class="phone-only">
             <div class="menu_icon-line linea"></div>
             <div class="menu_icon-line lineb"></div>
             <div class="menu_icon-line linec"></div>
           </div>
-        <nav class="phone-nav" id="phone-only">
+        <nav class="phone-nav" class="phone-only">
           <ul>
             <li><a href="">開催情報</a></li>
             <li><a href="">キャッチフレーズ</a></li>
