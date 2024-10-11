@@ -1,18 +1,20 @@
 "use strict";
 
+// ... 既存のコード ...
 if (
   !location.pathname.includes("/member") &&
   !location.pathname.includes("/greeting")
 ) {
-  const swiper = new Swiper(".swiper", {
-    loop: true,
-    slidesPerView: 1.3,
-    spaceBetween: 12,
-    centeredSlides: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper(".swiper", {
+      loop: false,
+      spaceBetween: 12,
+      width: 300,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
   });
 
   const slideBtns = document.querySelectorAll(".section__stalls-btn");
@@ -60,8 +62,7 @@ let height = window.innerHeight;
 window.addEventListener("resize", function () {
   width = window.innerWidth; // 画面の幅が変動がある度画面の幅を取得
   height = window.innerHeight; //画面の幅が変動がある度画面の高さを取得
-  console.log(width);
-  console.log(height);
+
   scroll();
 });
 
@@ -261,7 +262,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     slide.addEventListener("touchend", (e) => {
       const distanceX = Math.floor(endX - startX);
-      console.log(distanceX);
+
       if (distanceX > minDis) {
         switchTo2();
         reset();
@@ -308,7 +309,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     //画面外の部分をreset
     function reset(x) {
-      console.log("要素が画面外です。", x);
       const spans = texts[x].querySelectorAll("span");
       spans.forEach((span) => {
         span.style.color = "white";
@@ -317,14 +317,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //画面内の部分を動きを付ける
     function textPrint(x) {
-      console.log("要素が画面内に入っています。", x);
       const spans = texts[x].querySelectorAll("span"); //全部のspanを配列化
       const totalSpans = spans.length; //文字数
       const scrollTop = window.scrollY; //今のスクロールの位置取得
       const text = texts[x];
       let textTop;
-      console.log(width);
-      console.log(height);
 
       if (width >= 300 && width < 400) {
         textTop = text.offsetTop + text.offsetHeight - 1000;

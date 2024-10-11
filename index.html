@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <script src="./js/common.js" defer></script>
     <title>2024日専祭</title>
@@ -15,7 +16,7 @@
   <body>
     <header>
       <a href="index.html">
-        <img class="header-logo" src="img/header-logo.svg" alt="日専祭2024"
+        <img class="header-logo" src="img/header-logo.svg" alt="日専祭2024ロゴ"
       /></a>
 
       <nav class="pc-nav" id="pc-only">
@@ -53,23 +54,16 @@
         </ul>
       </nav>
     </header>
-
     <main>
       <section class="section__keyvisual">
         <div class="keyvisual_logo">
-          <img src="./img/logo.png" alt="日専祭2024ロゴ" />
-        </div>
-        <div class="keyvisual_light">
-          <img src="./img/lights.svg" alt="ライト" />
-        </div>
-        <div class="keyvisual_catchphrase">
-          <img src="./img/catchphrase.png" alt="キャッチフレーズ" />
+          <img src="./img/kv1.png" alt="日専祭2024ロゴ" />
         </div>
         <div class="keyvisual_rocket">
-          <img src="./img/rocket.png" alt="ロケット" />
+          <img src="./img/kv2.png" alt="ロケット" />
         </div>
         <div class="keyvisual_smoke">
-          <img src="./img/kemuri.png" alt="煙" />
+          <img src="./img/kv3.png" alt="煙" />
         </div>
         <section class="section__event" id="event">
           <h2 class="section__ttl">
@@ -83,7 +77,7 @@
       </section>
       <section class="section__catchphrase" id="catchphrase">
         <h2 class="section__ttl">
-          <img src="./img/ttl/ttl_catchphrase.svg" alt="キャッチフレーズ" />
+          <img src="../img/ttl/ttl_catchphrase.svg" alt="キャッチフレーズ" />
         </h2>
         <picture class="section__catchphrase-img">
           <img src="./img/catchphrase.png" alt="今しか作れない明日がある" />
@@ -98,7 +92,7 @@
       </section>
       <section class="section__character" id="character">
         <h2 class="section__ttl">
-          <img src="./img/ttl/ttl_character.svg" alt="新キャラクターの紹介" />
+          <img src="../img/ttl/ttl_character.svg" alt="新キャラクターの紹介" />
         </h2>
         <p class="section__character-text">今年度からのキャラクター</p>
         <p class="section__character-text section__character-text--bold">
@@ -149,7 +143,7 @@
               <li class="section__stalls-btn" data-target="B4">４号館</li>
             </ul>
           </div>
-          <div class="section__stalls-info">
+          <!-- <div class="section__stalls-info">
             <ul>
               <li>771教室 Webデザイン科制作物</li>
               <li>772教室Webデザイン グラフィックチーム</li>
@@ -160,17 +154,17 @@
               <li>771教室 Webデザイン科制作物</li>
               <li>772教室Webデザイン グラフィックチーム</li>
             </ul>
+          </div> -->
+          <div class="section__stalls-current">
+            <div class="swiper-button-prev"></div>
+            <p>7F</p>
+            <div class="swiper-button-next"></div>
           </div>
           <div class="swiper">
-            <div class="section__stalls-current">
-              <div class="swiper-button-prev"></div>
-              <p>7F</p>
-              <div class="swiper-button-next"></div>
-            </div>
             <div id="B7" class="swiper-wrapper">
               <div class="swiper-slide">
                 <picture class="slide__img">
-                  <img src="./img/ozakiyuka.png" alt="" />
+                  <img src="./img/denchan.png" alt="" />
                 </picture>
                 <div class="slide__container">
                   <span class="slide__place">7階771教室</span>
@@ -184,25 +178,76 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <img src="./img/7171.png" />
+                <picture class="slide__img">
+                  <img src="./img/denchan.png" alt="" />
+                </picture>
+                <div class="slide__container">
+                  <span class="slide__place">7階771教室</span>
+                  <p class="slide__ttl">Webデザイン科制作物</p>
+                  <p class="slide__txt">
+                    Webデザイン科の学生が制作したWebサイト、
+                    アプリケーション、イラストなどが展示されています。Webデザイン科の
+                    学生が制作したWebサイト、
+                    アプリケーション、イラストなどが展示されています。
+                  </p>
+                </div>
               </div>
               <div class="swiper-slide">
-                <img src="./img/7172.png" />
+                <picture class="slide__img">
+                  <img src="./img/denchan.png" alt="" />
+                </picture>
+                <div class="slide__container">
+                  <span class="slide__place">7階771教室</span>
+                  <p class="slide__ttl">Webデザイン科制作物</p>
+                  <p class="slide__txt">
+                    Webデザイン科の学生が制作したWebサイト、
+                    アプリケーション、イラストなどが展示されています。Webデザイン科の
+                    学生が制作したWebサイト、
+                    アプリケーション、イラストなどが展示されています。
+                  </p>
+                </div>
               </div>
               <div class="swiper-slide">
-                <img src="./img/7772.png" />
+                <picture class="slide__img">
+                  <img src="./img/denchan.png" alt="" />
+                </picture>
+                <div class="slide__container">
+                  <span class="slide__place">7階771教室</span>
+                  <p class="slide__ttl">Webデザイン科制作物</p>
+                  <p class="slide__txt">
+                    Webデザイン科の学生が制作したWebサイト、
+                    アプリケーション、イラストなどが展示されています。Webデザイン科の
+                    学生が制作したWebサイト、
+                    アプリケーション、イラストなどが展示されています。
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <picture class="slide__img">
+                  <img src="./img/denchan.png" alt="" />
+                </picture>
+                <div class="slide__container">
+                  <span class="slide__place">7階771教室</span>
+                  <p class="slide__ttl">Webデザイン科制作物</p>
+                  <p class="slide__txt">
+                    Webデザイン科の学生が制作したWebサイト、
+                    アプリケーション、イラストなどが展示されています。Webデザイン科の
+                    学生が制作したWebサイト、
+                    アプリケーション、イラストなどが展示されています。
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- <section class="section__voiceactor" id="voiceactor">
+      <section class="section__voiceactor" id="voiceactor">
         <h2 class="section__ttl">
           <img src="./img/ttl/ttl_voiceactor.svg" alt="" />
         </h2>
         <div class="section__voiceactor-content">
           <picture class="section__voiceactor-img">
-            <img src="./img/ozakiyuka.png" alt="声優の画像" />
+            <!-- <img src="./img/ozakiyuka.png" alt="声優の画像" /> -->
           </picture>
           <ul class="section__voiceactor-list">
             <li class="section__voiceactor-item">今年度は事前予約制です。</li>
@@ -214,9 +259,9 @@
               フォンなどでの撮影や録画、音声の録音は禁止とさせていただきます。
             </li>
           </ul>
-          <a class="btn btn--gradation">予約する</a>
+          <!-- <a class="btn btn--gradation">予約する</a> -->
         </div>
-      </section> -->
+      </section>
       <section class="section__executiveplan" id="executiveplan">
         <h2 class="section__ttl">
           <img src="./img/ttl/ttl_executiveplan.svg" alt="実行委員企画" />
