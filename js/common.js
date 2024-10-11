@@ -29,6 +29,46 @@ if (
       });
     });
   }
+  const light = document.querySelector(".keyvisual_light");
+  const logo = document.querySelector(".keyvisual_logo");
+  let logoHeight = logo.offsetHeight; // logoの高さを取得
+  document.addEventListener("scroll", function () {
+    logoHeight = logo.offsetHeight;
+    const width = window.innerWidth;
+    if (window.scrollY > ((0.3 * width) / 1280) * logoHeight) {
+      light.classList.add("stop");
+    } else {
+      light.classList.remove("stop");
+    }
+  });
+  // function kvheight() {
+  //   const bottom = document.querySelector(".btn__container1");
+  //   const bottomPosition = bottom.offsetTop;
+  //   console.log(bottomPosition);
+  //   logo.style.height = bottomPosition + 600;
+  //   console.log(logo.style.height);
+  // }
+  // kvheight();
+  // window.addEventListener("resize", kvheight);
+  const buttons = [...document.querySelectorAll(".section__stalls-btn")];
+  const wrappers = [...document.querySelectorAll(".swiper-wrapper")];
+
+  buttons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      document.querySelectorAll(".section__stalls-btn").forEach(function (b) {
+        b.classList.remove("active");
+      });
+      // クリックされたボタンにアクティブクラスを追加
+      button.classList.add("active");
+
+      // すべてのスライドを非表示にする
+      document.querySelectorAll(".swiper-wrapper").forEach(function (wrapper) {
+        wrapper.style.display = "none";
+      });
+
+      wrappers[index].style.display = "flex"; // 対応するラッパーを表示
+    });
+  });
 }
 
 //back to topボタンの作り、logoとnavのfixed効果

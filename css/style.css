@@ -244,6 +244,7 @@ b {
 #sub-container {
   max-width: 640px;
   margin: 0 auto;
+  /* background-image: url(../img/bg_pc.png); */
   background-color: #f0faff;
   position: relative;
   font-size: 16px;
@@ -499,10 +500,8 @@ footer {
 } */
 
 .keyvisual_logo {
-  img {
-    width: 700px;
-    margin-inline: auto;
-  }
+  /* width: 700px;
+    margin-inline: auto; */
 }
 
 /* .keyvisual_catchphrase {
@@ -510,21 +509,46 @@ footer {
   position: absolute;
 } */
 
-.keyvisual_rocket {
-  position: absolute;
+/* .keyvisual_light {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  img {
+    width: 100%;
+  }
+} */
+/* position: absolute;
   top: 100px;
-  /* width: 216.917px;
+  width: 216.917px;
   height: 230.381px;
   transform: rotate(7.68deg);
   flex-shrink: 0;
   margin-inline: auto; */
+.keyvisual_light {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  img {
+    width: 100%;
+  }
 }
-
+.stop {
+  position: absolute;
+  top: 0;
+}
 .keyvisual_smoke {
-  /* height: 300px; */
+  width: 100%;
+  position: absolute;
+  top: 27.5%;
+
+  img {
+    width: 100%;
+  }
+
+  /* height: 300px;
   position: absolute;
   top: 300px;
-  /* width: 1086px;
+  width: 1086px;
   height: 800px;
   flex-shrink: 0;
   margin-inline: auto; */
@@ -542,7 +566,7 @@ footer {
   flex-direction: column;
   gap: 60px;
   padding-top: 20px;
-  padding-bottom: 200px;
+  padding-bottom: 120px;
 }
 .section__catchphrase-text {
   color: #3655a1;
@@ -555,9 +579,10 @@ footer {
   width: 85%;
 }
 .section__character {
-  background-image: url(../img/kyarahaikei.png);
-  padding-top: 80px;
-  padding-bottom: 45px;
+  background-image: url(../img/kyara.png);
+
+  /* padding-top: 80px;
+  padding-bottom: 45px; */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -609,7 +634,12 @@ footer {
 }
 
 .section__stalls-text {
+  z-index: 9999;
   position: relative;
+  background-color: #f0faff;
+  background-image: url(../img/bg_pc.png);
+  /* background-image: #f0faff; */
+  background-image: url(../img/bg_pc.png);
   padding-top: 60px;
   background: var(--text, linear-gradient(90deg, #3655a1 0%, #b16fa0 81.61%));
   background-clip: text;
@@ -771,6 +801,7 @@ footer {
 .swiper {
   width: 100%;
   height: 500px;
+  overflow-x: hidden;
 }
 .swiper-button-next,
 .swiper-button-prev {
@@ -1125,16 +1156,48 @@ footer {
 }
 
 @media screen and (min-width: 640px) {
+  .keyvisual_logo {
+    position: relative;
+    width: 100%;
+    height: 2400px;
+    img {
+      width: 100%;
+    }
+  }
+  .keyvisual_light {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+  .keyvisual_smoke {
+    width: 100%;
+    position: absolute;
+    top: 27.5%;
+
+    img {
+      width: 100%;
+    }
+  }
   .section__event {
+    position: absolute;
+    bottom: -400px;
     width: 100%;
     padding-inline: 40px;
     padding-bottom: 100px;
     gap: 64px;
+    img {
+      width: auto;
+    }
   }
   .btn__container {
     flex-direction: row;
   }
-
+  .section__catchphrase {
+    position: relative;
+    z-index: 15;
+  }
   .section__catchphrase-img {
     img {
       width: 40vw;
