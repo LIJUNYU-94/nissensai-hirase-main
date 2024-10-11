@@ -6,29 +6,96 @@ if (
   !location.pathname.includes("/greeting")
 ) {
   document.addEventListener("DOMContentLoaded", function () {
-    const swiper = new Swiper(".swiper", {
-      loop: false,
-      spaceBetween: 12,
-      width: 300,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+    const buttons = [...document.querySelectorAll(".section__stalls-btn")];
+    const swipers = [...document.querySelectorAll(".swiper")];
+    swipers.forEach((swiperElement) => {
+      new Swiper(swiperElement, {
+        loop: false,
+        spaceBetween: 12,
+        width: 300,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
     });
-  });
+    // const swiper = new Swiper(".swiper", {
+    //   loop: false,
+    //   spaceBetween: 12,
+    //   width: 300,
+    //   navigation: {
+    //     nextEl: ".swiper-button-next",
+    //     prevEl: ".swiper-button-prev",
+    //   },
+    // });
 
-  const slideBtns = document.querySelectorAll(".section__stalls-btn");
-  if (slideBtns) {
-    slideBtns.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const targetId = btn.getAttribute("data-target");
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-          targetSection.scrollIntoView({ behavior: "smooth" });
+    // 各スライドにaria-labelを設定
+    document
+      .querySelector(".swiper-button-next")
+      .classList.remove("swiper-button-lock");
+    document
+      .querySelector(".swiper-button-next")
+      .classList.remove("swiper-button-disabled");
+    document
+      .querySelector(".swiper-button-prev")
+      .classList.remove("swiper-button-lock");
+    swipers.forEach(function (x) {
+      x.style.display = "none";
+    });
+    swipers[0].style.display = "block";
+    buttons[0].classList.add("active");
+    buttons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".section__stalls-btn").forEach(function (b) {
+          b.classList.remove("active");
+        });
+        // クリックされたボタンにアクティブクラスを追加
+        button.classList.add("active");
+
+        // すべてのスライドを非表示にする
+        swipers.forEach(function (x) {
+          x.style.display = "none";
+        });
+        swipers[index].style.display = "flex"; // 対応するラッパーを表示
+        let wrapper = swipers[index].querySelector(".swiper-wrapper");
+        wrapper.style.transform = "translate3d(0px, 0px, 0px)";
+        if (index === 3 || index === 4) {
+          document
+            .querySelector(".swiper-button-next")
+            .classList.add("swiper-button-lock");
+          document
+            .querySelector(".swiper-button-prev")
+            .classList.add("swiper-button-lock");
+        } else {
+          document
+            .querySelector(".swiper-button-next")
+            .classList.remove("swiper-button-lock");
+          document
+            .querySelector(".swiper-button-next")
+            .classList.remove("swiper-button-disabled");
+          document
+            .querySelector(".swiper-button-prev")
+            .classList.remove("swiper-button-lock");
+          document
+            .querySelector(".swiper-button-prev")
+            .classList.add("swiper-button-disabled");
         }
       });
     });
-  }
+  });
+
+  // const slideBtns = document.querySelectorAll(".section__stalls-btn");
+  // if (slideBtns) {
+  //   slideBtns.forEach((btn) => {
+  //     btn.addEventListener("click", () => {
+  //       const targetId = btn.getAttribute("data-target");
+  //       const targetSection = document.getElementById(targetId);
+  //       if (targetSection) {
+  //         targetSection.scrollIntoView({ behavior: "smooth" });
+  //       }
+  //     });
+  //   });
+  // }
   const light = document.querySelector(".keyvisual_light");
   const logo = document.querySelector(".keyvisual_logo");
   let logoHeight = logo.offsetHeight; // logoの高さを取得
@@ -50,25 +117,6 @@ if (
   // }
   // kvheight();
   // window.addEventListener("resize", kvheight);
-  const buttons = [...document.querySelectorAll(".section__stalls-btn")];
-  const wrappers = [...document.querySelectorAll(".swiper-wrapper")];
-
-  buttons.forEach((button, index) => {
-    button.addEventListener("click", () => {
-      document.querySelectorAll(".section__stalls-btn").forEach(function (b) {
-        b.classList.remove("active");
-      });
-      // クリックされたボタンにアクティブクラスを追加
-      button.classList.add("active");
-
-      // すべてのスライドを非表示にする
-      document.querySelectorAll(".swiper-wrapper").forEach(function (wrapper) {
-        wrapper.style.display = "none";
-      });
-
-      wrappers[index].style.display = "flex"; // 対応するラッパーを表示
-    });
-  });
 }
 
 //back to topボタンの作り、logoとnavのfixed効果

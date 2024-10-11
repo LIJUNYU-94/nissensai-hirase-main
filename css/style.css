@@ -616,7 +616,6 @@ footer {
   width: 260px;
 }
 .section__character-img,
-.section__stalls-img,
 .section__catchphrase-img,
 .section__voiceactor-img {
   display: block;
@@ -627,10 +626,15 @@ footer {
 .section__stalls {
   padding-top: 60px;
   padding-bottom: 130px;
+  padding-left: 5%;
 }
 
 .section__stalls-contents {
   display: contents;
+  .section__stalls-img {
+    padding-left: 5%;
+    padding-top: 40px;
+  }
 }
 
 .section__stalls-text {
@@ -651,7 +655,7 @@ footer {
   font-weight: 700;
   line-height: 185%;
   letter-spacing: 0.45px;
-  padding-left: 7.5vw;
+  padding-left: 6%;
   &::before {
     content: "";
     position: absolute;
@@ -718,6 +722,10 @@ footer {
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0px 4px 4px 0px rgba(176, 114, 254, 0.2);
   position: relative;
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
   &::after {
     position: absolute;
     width: 13px;
@@ -787,6 +795,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 20px;
+
   p {
     font-family: Inter;
     font-size: 64px;
@@ -799,10 +808,15 @@ footer {
   }
 }
 .swiper {
-  width: 100%;
   height: 500px;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
+.swiper-wrapper {
+  display: flex; /* スライドを横に並べる */
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   position: unset;
@@ -1225,7 +1239,7 @@ footer {
 
   .section__stalls {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 40% 60%;
     grid-template-rows: 1fr;
     width: 100%;
   }
