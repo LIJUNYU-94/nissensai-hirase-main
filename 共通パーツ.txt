@@ -51,13 +51,13 @@
           </p>
 
           <ul class="footer-ul footer-ul-ul1">
-            <li><a href="">開催情報</a></li>
-            <li><a href="">キャッチフレーズ</a></li>
-            <li><a href="">キャラクター紹介</a></li>
-            <li><a href="">展示・出展</a></li>
-            <li><a href="">声優トークショー</a></li>
-            <li><a href="">実行委員企画</a></li>
-            <li><a href="">注意事項</a></li>
+           <li><a href="#event">開催情報</a></li>
+          <li><a href="#catchphrase">キャッチフレーズ</a></li>
+          <li><a href="#character">キャラクター紹介</a></li>
+          <li><a href="#stalls">展示・出展</a></li>
+          <li><a href="#voiceactor">声優トークショー</a></li>
+          <li><a href="#executiveplan">実行委員企画</a></li>
+          <li><a href="#precautions">注意事項</a></li>
           </ul>
           <ul class="footer-ul footer-ul-ul2">
             <li><a href="../greeting/index.html">- ごあいさつ -</a></li>

@@ -145,6 +145,7 @@ section {
 
 html {
   font-family: "Noto Sans JP", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
