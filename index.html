@@ -7,6 +7,19 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"
+      defer
+      type="text/javascript"
+    ></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
@@ -142,7 +155,12 @@
             本館、4号館、5号館、7号館、9号館にわかれ、<br />展示や体験型のワークショップ等を行っています。<br />是非、お楽しみください
           </p>
           <picture class="section__stalls-img">
-            <img src="./img/access.png" alt="会場図" />
+            <a href="./img/map.svg" data-lightbox="pc" class="pc-only"
+              ><img src="./img/access.png" alt="会場図" class="pc-only"
+            /></a>
+            <a href="./img/mapsp.jpg" data-lightbox="phone" class="phone-only">
+              <img src="./img/access.png" alt="会場図" class="phone-only"
+            /></a>
           </picture>
         </div>
         <div class="section__stalls-exhibition">
@@ -173,24 +191,36 @@
           </div>
           <div class="section__stalls-info">
             <ul>
-              <li>771教室 Webデザイン科制作物</li>
-              <li>772教室Webデザイン グラフィックチーム</li>
-              <li>771教室 Webデザイン科制作物</li>
-              <li>772教室Webデザイン グラフィックチーム</li>
-              <li>771教室 Webデザイン科制作物</li>
-              <li>772教室Webデザイン グラフィックチーム</li>
-              <li>771教室 Webデザイン科制作物</li>
-              <li>772教室Webデザイン グラフィックチーム</li>
+              <li class="section__stalls-info-place">
+                771教室 Webデザイン科制作物
+              </li>
+              <li class="section__stalls-info-place">
+                772教室Webデザイン グラフィックチーム
+              </li>
+              <li class="section__stalls-info-place">
+                771教室 Webデザイン科制作物
+              </li>
+              <li class="section__stalls-info-place">
+                772教室Webデザイン グラフィックチーム
+              </li>
+              <li class="section__stalls-info-place">
+                771教室 Webデザイン科制作物
+              </li>
+              <li class="section__stalls-info-place">
+                772教室Webデザイン グラフィックチーム
+              </li>
+              <li class="section__stalls-info-place">
+                771教室 Webデザイン科制作物
+              </li>
+              <li class="section__stalls-info-place">
+                772教室Webデザイン グラフィックチーム
+              </li>
             </ul>
           </div>
-          <!-- <div class="section__stalls-current">
-            <div class="swiper-button-prev"></div>
-            <p>7F</p>
-            <div class="swiper-button-next"></div>
-          </div> -->
+
           <div class="section__stalls-current">
             <div class="swiper-button-prev"></div>
-            <p>7F</p>
+            <p class="section__stalls-currentfloor">B1F</p>
             <div class="swiper-button-next"></div>
           </div>
           <div class="swiper">

@@ -600,6 +600,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding-bottom: 40px;
 }
 .section__character-text {
   color: #fff;
@@ -831,7 +832,7 @@ footer {
 
   p {
     font-family: Inter;
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 700;
     letter-spacing: 3.2px;
     background: var(--holo-sticker);
@@ -905,6 +906,7 @@ footer {
 }
 
 .slide__place {
+  font-size: 12px;
   width: fit-content;
   margin-left: auto;
   color: #fff;
@@ -983,9 +985,9 @@ footer {
 
 .section__voiceactor-img {
   padding: 0;
-  img {
+  /* img {
     width: 56vw;
-  }
+  } */
 }
 .section__executiveplan {
   padding-bottom: 30px;

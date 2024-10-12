@@ -5,9 +5,57 @@ if (
   !location.pathname.includes("/member") &&
   !location.pathname.includes("/greeting")
 ) {
+  const slides = [...document.querySelectorAll(".swiper .swiper-slide")];
+  const currentFloor = document.querySelector(".section__stalls-currentfloor");
+  const buttons = [...document.querySelectorAll(".section__stalls-btn")];
+  const swipers = [...document.querySelectorAll(".swiper")];
+  //階数によって文字変わる関数↓
+  function swiperFlex() {
+    const flexSwiper = swipers.find(
+      (swiper) =>
+        window.getComputedStyle(swiper).display === "flex" ||
+        window.getComputedStyle(swiper).display === "block"
+    ); //flex or blockになっているswiperを取り出す
+    const slides = flexSwiper
+      ? [...flexSwiper.querySelectorAll(".swiper-slide")]
+      : [];
+    const activeSlide = slides.find((slide) =>
+      slide.classList.contains("swiper-slide-active")
+    );
+    const activeSlidePlace = activeSlide
+      ? activeSlide.querySelector(".slide__place")
+      : null;
+    console.log(slides);
+    console.log(activeSlide);
+    console.log(activeSlidePlace);
+    const slideText = activeSlidePlace
+      ? activeSlidePlace.textContent.trim()
+      : "";
+    let newVariable; //文字編集
+    if (slideText.includes("階")) {
+      // 階があった場合
+      newVariable = slideText.split("階")[0] + "F"; // 階字前の文字を取り出す、Fを追加する
+    } else if (slideText.includes("館")) {
+      // 階がなかった場合
+      newVariable = slideText.split("館")[1]
+        ? slideText.split("館")[1].trim()
+        : ""; // 館の後ろの文字を取り出す
+    }
+    if (newVariable === "メディアホール") {
+      currentFloor.style.fontSize = "36px";
+    } else {
+      currentFloor.style.fontSize = "48px";
+    }
+
+    // 結果をコンソールに表示
+
+    if (newVariable !== undefined) {
+      currentFloor.innerHTML = newVariable;
+    }
+  }
+  //階数によって文字変わる関数↑
   document.addEventListener("DOMContentLoaded", function () {
-    const buttons = [...document.querySelectorAll(".section__stalls-btn")];
-    const swipers = [...document.querySelectorAll(".swiper")];
+    // Swiperのスライド要素をすべて取得
     swipers.forEach((swiperElement) => {
       new Swiper(swiperElement, {
         loop: false,
@@ -17,8 +65,15 @@ if (
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        on: {
+          slideChangeTransitionEnd: function () {
+            // スライドが変わった時にswiperFlexを実行
+            swiperFlex();
+          },
+        },
       });
     });
+
     // const swiper = new Swiper(".swiper", {
     //   loop: false,
     //   spaceBetween: 12,
@@ -28,8 +83,7 @@ if (
     //     prevEl: ".swiper-button-prev",
     //   },
     // });
-
-    // 各スライドにaria-labelを設定
+    infoRefresh(); //info欄に毎回ランダム情報を表示する
     document
       .querySelector(".swiper-button-next")
       .classList.remove("swiper-button-lock");
@@ -44,6 +98,7 @@ if (
     });
     swipers[0].style.display = "block";
     buttons[0].classList.add("active");
+
     buttons.forEach((button, index) => {
       button.addEventListener("click", () => {
         document.querySelectorAll(".section__stalls-btn").forEach(function (b) {
@@ -59,7 +114,7 @@ if (
         swipers[index].style.display = "flex"; // 対応するラッパーを表示
         let wrapper = swipers[index].querySelector(".swiper-wrapper");
         wrapper.style.transform = "translate3d(0px, 0px, 0px)";
-        if (index === 3 || index === 4) {
+        if (index === 4) {
           document
             .querySelector(".swiper-button-next")
             .classList.add("swiper-button-lock");
@@ -80,9 +135,41 @@ if (
             .querySelector(".swiper-button-prev")
             .classList.add("swiper-button-disabled");
         }
+        swiperFlex();
       });
     });
+    //階数を取得して表示する
+
+    // 各スライドのaria-labelを取得してコンソールに表示
   });
+  //流れるinfoの動き、ランダム↓
+  const slidePlace = [...document.querySelectorAll(".slide__place")];
+  const slideTtl = [...document.querySelectorAll(".slide__ttl")];
+  const infoPlace = [
+    ...document.querySelectorAll(".section__stalls-info-place"),
+  ];
+  function infoRefresh() {
+    let infoTotal = slidePlace.length;
+
+    const currentInfo = Math.floor(Math.random() * infoTotal);
+    let currentBuilding;
+    if (currentInfo >= 0 && currentInfo <= 6) {
+      currentBuilding = "本館";
+    } else if (currentInfo >= 7 && currentInfo <= 20) {
+      currentBuilding = "７号館";
+    } else if (currentInfo >= 21 && currentInfo <= 29) {
+      currentBuilding = "９号館";
+    } else if (currentInfo >= 30 && currentInfo <= 31) {
+      currentBuilding = "５号館";
+    } else {
+      currentBuilding = "４号館";
+    }
+
+    infoPlace.forEach((x) => {
+      x.innerHTML = `${currentBuilding} ${slidePlace[currentInfo].innerHTML}    ${slideTtl[currentInfo].innerHTML} 展示中`;
+    });
+  }
+  //流れるinfoの動き、ランダム↑
 
   // const slideBtns = document.querySelectorAll(".section__stalls-btn");
   // if (slideBtns) {
@@ -96,6 +183,8 @@ if (
   //     });
   //   });
   // }
+
+  //lightの止まり効果
   const light = document.querySelector(".keyvisual_light");
   const logo = document.querySelector(".keyvisual_logo");
   let logoHeight = logo.offsetHeight; // logoの高さを取得
@@ -108,15 +197,7 @@ if (
       light.classList.remove("stop");
     }
   });
-  // function kvheight() {
-  //   const bottom = document.querySelector(".btn__container1");
-  //   const bottomPosition = bottom.offsetTop;
-  //   console.log(bottomPosition);
-  //   logo.style.height = bottomPosition + 600;
-  //   console.log(logo.style.height);
-  // }
-  // kvheight();
-  // window.addEventListener("resize", kvheight);
+  //lightの止まり効果
 }
 
 //back to topボタンの作り、logoとnavのfixed効果
