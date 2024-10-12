@@ -421,9 +421,12 @@ document.addEventListener("DOMContentLoaded", function () {
         textTop = text.offsetTop + text.offsetHeight - 1400;
       } else if (width <= 1500) {
         textTop = text.offsetTop + text.offsetHeight - 1100;
-      } else {
+      } else if (width <= 1920) {
         textTop = text.offsetTop + text.offsetHeight - 900;
-      } //スマホとpcのスピード調整
+      } else {
+        textTop = text.offsetTop + text.offsetHeight - 1400;
+      }
+      //スマホとpcのスピード調整
 
       const viewportHeight = window.innerHeight; //viewport取得
       const scrollPercent = Math.min((scrollTop - textTop) / viewportHeight, 1); //パーセント計算
