@@ -102,7 +102,7 @@ if (
   document.addEventListener("scroll", function () {
     logoHeight = logo.offsetHeight;
     const width = window.innerWidth;
-    if (window.scrollY > ((0.3 * width) / 1280) * logoHeight) {
+    if (window.scrollY > ((0.4 * width) / 1280) * logoHeight) {
       light.classList.add("stop");
     } else {
       light.classList.remove("stop");

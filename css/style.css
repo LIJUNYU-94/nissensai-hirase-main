@@ -253,14 +253,18 @@ b {
 }
 
 .header-logo {
+  width: 33%;
+  max-width: 180px;
   position: fixed;
   left: 1%;
   top: 20px;
   z-index: 15;
 }
+
 .menu_icon {
-  height: 60px;
-  width: 60px;
+  max-width: 60px;
+  width: 15%;
+  aspect-ratio: 1 / 1;
   position: fixed;
   top: 20px;
   right: 20px;
@@ -270,8 +274,7 @@ b {
   justify-content: center;
   gap: 10px;
   .menu_icon-line {
-    content: "";
-    width: 60px;
+    width: 100%;
     border-top: 5px solid #3655a1;
   }
 }
@@ -504,8 +507,13 @@ footer {
 } */
 
 .keyvisual_logo {
-  /* width: 700px;
-    margin-inline: auto; */
+  position: relative;
+  width: 100%;
+  /* height: 2400px; */
+
+  img {
+    width: 100%;
+  }
 }
 
 /* .keyvisual_catchphrase {
@@ -513,14 +521,6 @@ footer {
   position: absolute;
 } */
 
-/* .keyvisual_light {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  img {
-    width: 100%;
-  }
-} */
 /* position: absolute;
   top: 100px;
   width: 216.917px;
@@ -543,8 +543,10 @@ footer {
 .keyvisual_smoke {
   width: 100%;
   position: absolute;
-  top: 27.5%;
-
+  top: 23.5%;
+  @media screen and (min-width: 440px) and (max-width: 640px) {
+    top: 26%;
+  }
   img {
     width: 100%;
   }
@@ -563,8 +565,13 @@ footer {
   flex-direction: column;
   gap: 90px;
   padding-bottom: 180px;
+  img {
+    width: auto;
+  }
 }
 .section__catchphrase {
+  position: relative;
+
   background-image: url(../img/kyattihaikei.png),
     linear-gradient(#fbc75f, #fbc75f);
   background-repeat: repeat no-repeat;
@@ -574,9 +581,6 @@ footer {
   gap: 60px;
   padding-top: 20px;
   padding-bottom: 120px;
-  .section__ttl {
-    padding-left: 40px;
-  }
 }
 .section__catchphrase-text {
   color: #3655a1;
@@ -590,15 +594,12 @@ footer {
 }
 .section__character {
   background-image: url(../img/kyara.png);
-
+  background-position: center;
   /* padding-top: 80px;
   padding-bottom: 45px; */
   display: flex;
   flex-direction: column;
   gap: 20px;
-  .section__ttl {
-    padding-left: 40px;
-  }
 }
 .section__character-text {
   color: #fff;
@@ -639,13 +640,12 @@ footer {
 .section__stalls {
   padding-top: 60px;
   padding-bottom: 130px;
-  padding-left: 5%;
 }
 
 .section__stalls-contents {
   display: contents;
   .section__stalls-img {
-    padding-left: 5%;
+    width: 90%;
     padding-top: 40px;
   }
 }
@@ -676,11 +676,13 @@ footer {
     width: 100px;
     height: 80px;
     top: 0;
-    right: 50px;
+    left: 275px;
+
     background: url(../img/plan_line.svg) no-repeat;
     background-size: 99%;
     transform: rotate(180deg);
   }
+
   span {
     font-family: "Yusei Magic";
     font-size: 36px;
@@ -690,7 +692,24 @@ footer {
     letter-spacing: 5.4px;
   }
 }
-
+@media screen and (max-width: 440px) {
+  .section__stalls-text {
+    &::before {
+      left: auto;
+      right: 7.5vw;
+    }
+  }
+}
+@media screen and (min-width: 393px) and (max-width: 850px) {
+  .section__stalls-text {
+    text-align: center;
+  }
+  .section__stalls-img {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
 .section__stalls-exhibition {
   border-radius: 30px 0px 0px 30px;
   background-color: var(--clr-footer-blue);
@@ -826,6 +845,15 @@ footer {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
+  .swiper-slide {
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 2px 10px 0px rgba(176, 114, 254, 0.8);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 .swiper-wrapper {
   display: flex; /* スライドを横に並べる */
@@ -854,16 +882,6 @@ footer {
     background: url(../img/next.svg) center;
     background-size: 99%;
   }
-}
-
-.swiper-slide {
-  padding: 12px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0px 2px 10px 0px rgba(176, 114, 254, 0.8);
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
 }
 
 .slide__img {
@@ -1111,6 +1129,9 @@ footer {
   &:nth-child(7) {
     padding-top: 15px;
   }
+  @media screen and (max-width: 360px) {
+    font-size: 12px;
+  }
 }
 .section__precautions {
   padding-bottom: 60px;
@@ -1184,26 +1205,14 @@ footer {
 }
 
 @media screen and (min-width: 640px) {
-  .keyvisual_logo {
-    position: relative;
-    width: 100%;
-    height: 2400px;
-    img {
-      width: 100%;
-    }
-  }
-  .keyvisual_light {
-    width: 100%;
-
-    img {
-      width: 100%;
-    }
-  }
   .keyvisual_smoke {
-    width: 100%;
-    position: absolute;
-    top: 27.5%;
-
+    top: 32%;
+    @media screen and (min-width: 640px) and (max-width: 960px) {
+      top: 27%;
+    }
+    @media screen and (min-width: 960px) and (max-width: 1280px) {
+      top: 30%;
+    }
     img {
       width: 100%;
     }
@@ -1223,8 +1232,10 @@ footer {
     flex-direction: row;
   }
   .section__catchphrase {
-    position: relative;
     z-index: 8;
+    .section__ttl {
+      padding-left: 40px;
+    }
   }
   .section__catchphrase-img {
     img {
@@ -1239,6 +1250,11 @@ footer {
   .section__character {
     position: relative;
     z-index: 9;
+    .section__ttl {
+      padding-top: 20px;
+      padding-left: 40px;
+    }
+    padding-bottom: 100px;
   }
   .section__character-text {
     width: unset;
@@ -1253,28 +1269,41 @@ footer {
     width: 440px;
     padding-block: 8px;
   }
-
-  .section__stalls {
-    display: grid;
-    grid-template-columns: 450px auto;
-    grid-template-rows: 1fr;
-    width: 100%;
+  @media screen and (min-width: 850px) {
+    .section__stalls-contents {
+      display: flex;
+      flex-direction: column;
+      grid-column: span 1;
+    }
+    .section__stalls {
+      display: grid;
+      grid-template-columns: 450px auto;
+      grid-template-rows: 1fr;
+      width: 100%;
+      padding-left: 5%;
+    }
   }
 
+  .section__stalls-text {
+    &::before {
+      left: auto;
+      right: 50px;
+    }
+  }
   .section__stalls-exhibition {
     grid-row: span 3;
   }
 
-  .section__stalls-contents {
-    display: flex;
-    flex-direction: column;
-    grid-column: span 1;
-
-    /* flex-basis: 37.5%; */
-  }
   /* .section__stalls-exhibition {
     flex-basis: 62.5%;
   } */
+  .section__stalls-contents {
+    .section__stalls-img {
+      width: 100%;
+      padding: 5%;
+      padding-top: 40px;
+    }
+  }
 
   .section__voiceactor,
   .section__executiveplan,

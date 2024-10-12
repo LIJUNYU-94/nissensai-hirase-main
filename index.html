@@ -57,14 +57,28 @@
     <main>
       <section class="section__keyvisual">
         <div class="keyvisual_logo">
-          <img src="./img/pckv1.png" alt="kv背景" />
+          <picture>
+            <source media="(min-width: 1280px)" srcset="./img/pckv11.png" />
+            <source media="(min-width: 960px)" srcset="./img/pckv111.png" />
+            <source media="(min-width: 640px)" srcset="./img/pckv1.png" />
+            <source media="(min-width: 440px)" srcset="./img/phonekv11.png" />
+            <img src="./img/phonekv111.png" alt="kv背景" />
+          </picture>
+          <!-- <img src="./img/pckv11.png" alt="kv背景" /> -->
 
           <div class="keyvisual_light">
-            <img src="./img/kv2.png" alt="ライト" />
+            <picture>
+              <source media="(min-width: 640px)" srcset="./img/kv2.png" />
+              <img src="./img/phonekv2.png" alt="ライト" />
+            </picture>
           </div>
 
           <div class="keyvisual_smoke">
-            <img src="./img/kv3.png" alt="煙+ロケット" />
+            <picture>
+              <source media="(min-width: 640px)" srcset="./img/kv3.png" />
+              <img src="./img/phonekv3.png" alt="煙+ロケット" />
+            </picture>
+
             <section class="section__event" id="event">
               <h2 class="section__ttl">
                 <img src="./img/ttl/ttl_event.svg" alt="開催にあたって" />
@@ -132,23 +146,29 @@
           </picture>
         </div>
         <div class="section__stalls-exhibition">
-          <div class="section__stalls-container">
-            <ul class="section__stalls-list">
+          <div class="section__stalls-container swiper-container">
+            <ul class="section__stalls-list swiper-wrapper">
               <li
-                class="section__stalls-btn section__stalls-btn--info"
+                class="section__stalls-btn section__stalls-btn--info swiper-slide"
                 data-target="B1"
               >
                 本館
               </li>
               <li
-                class="section__stalls-btn section__stalls-btn--info"
+                class="section__stalls-btn section__stalls-btn--info swiper-slide"
                 data-target="B7"
               >
                 ７号館
               </li>
-              <li class="section__stalls-btn" data-target="B9">９号館</li>
-              <li class="section__stalls-btn" data-target="B5">５号館</li>
-              <li class="section__stalls-btn" data-target="B4">４号館</li>
+              <li class="section__stalls-btn swiper-slide" data-target="B9">
+                ９号館
+              </li>
+              <li class="section__stalls-btn swiper-slide" data-target="B5">
+                ５号館
+              </li>
+              <li class="section__stalls-btn swiper-slide" data-target="B4">
+                ４号館
+              </li>
             </ul>
           </div>
           <div class="section__stalls-info">
