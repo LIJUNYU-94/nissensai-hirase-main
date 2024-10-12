@@ -565,7 +565,10 @@ footer {
   padding-bottom: 180px;
 }
 .section__catchphrase {
-  background-image: url(../img/kyattihaikei.png);
+  background-image: url(../img/kyattihaikei.png),
+    linear-gradient(#fbc75f, #fbc75f);
+  background-repeat: repeat no-repeat;
+  background-position: top, bottom;
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -1221,7 +1224,7 @@ footer {
   }
   .section__catchphrase {
     position: relative;
-    z-index: 15;
+    z-index: 8;
   }
   .section__catchphrase-img {
     img {
@@ -1233,7 +1236,10 @@ footer {
     font-size: 20px;
     width: 56%;
   }
-
+  .section__character {
+    position: relative;
+    z-index: 9;
+  }
   .section__character-text {
     width: unset;
     font-size: 32px;
