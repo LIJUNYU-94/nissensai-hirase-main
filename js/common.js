@@ -114,7 +114,7 @@ if (
         swipers[index].style.display = "flex"; // 対応するラッパーを表示
         let wrapper = swipers[index].querySelector(".swiper-wrapper");
         wrapper.style.transform = "translate3d(0px, 0px, 0px)";
-        if (index === 4) {
+        if (index === 4||index === 3) {
           document
             .querySelector(".swiper-button-next")
             .classList.add("swiper-button-lock");
@@ -155,11 +155,11 @@ if (
     let currentBuilding;
     if (currentInfo >= 0 && currentInfo <= 6) {
       currentBuilding = "本館";
-    } else if (currentInfo >= 7 && currentInfo <= 20) {
+    } else if (currentInfo >= 7 && currentInfo <= 21) {
       currentBuilding = "７号館";
-    } else if (currentInfo >= 21 && currentInfo <= 29) {
+    } else if (currentInfo >= 22 && currentInfo <= 30) {
       currentBuilding = "９号館";
-    } else if (currentInfo >= 30 && currentInfo <= 31) {
+    } else if (currentInfo >= 31 && currentInfo <= 32) {
       currentBuilding = "５号館";
     } else {
       currentBuilding = "４号館";

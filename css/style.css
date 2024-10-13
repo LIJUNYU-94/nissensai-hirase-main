@@ -648,6 +648,8 @@ footer {
   .section__stalls-img {
     width: 90%;
     padding-top: 40px;
+    display: block;
+    margin:0 auto;
   }
 }
 
