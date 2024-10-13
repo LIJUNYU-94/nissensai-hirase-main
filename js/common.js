@@ -25,9 +25,7 @@ if (
     const activeSlidePlace = activeSlide
       ? activeSlide.querySelector(".slide__place")
       : null;
-    console.log(slides);
-    console.log(activeSlide);
-    console.log(activeSlidePlace);
+
     const slideText = activeSlidePlace
       ? activeSlidePlace.textContent.trim()
       : "";
@@ -43,6 +41,10 @@ if (
     }
     if (newVariable === "メディアホール") {
       currentFloor.style.fontSize = "36px";
+      currentFloor.style.bottom = "3px";
+    } else if (newVariable === "中庭") {
+      currentFloor.style.fontSize = "40px";
+      currentFloor.style.bottom = "2px";
     } else {
       currentFloor.style.fontSize = "48px";
     }
@@ -114,7 +116,7 @@ if (
         swipers[index].style.display = "flex"; // 対応するラッパーを表示
         let wrapper = swipers[index].querySelector(".swiper-wrapper");
         wrapper.style.transform = "translate3d(0px, 0px, 0px)";
-        if (index === 4||index === 3) {
+        if (index === 4 || index === 3) {
           document
             .querySelector(".swiper-button-next")
             .classList.add("swiper-button-lock");
@@ -185,16 +187,25 @@ if (
   // }
 
   //lightの止まり効果
-  const light = document.querySelector(".keyvisual_light");
-  const logo = document.querySelector(".keyvisual_logo");
-  let logoHeight = logo.offsetHeight; // logoの高さを取得
+
   document.addEventListener("scroll", function () {
+    const light = document.querySelector(".keyvisual_light");
+    const logo = document.querySelector(".keyvisual_logo");
+    let logoHeight = logo.offsetHeight; // logoの高さを取得
     logoHeight = logo.offsetHeight;
     const width = window.innerWidth;
-    if (window.scrollY > ((0.4 * width) / 1280) * logoHeight) {
-      light.classList.add("stop");
+    if (width >= 640) {
+      if (window.scrollY > ((0.4 * width) / 1280) * logoHeight) {
+        light.classList.add("stop");
+      } else {
+        light.classList.remove("stop");
+      }
     } else {
-      light.classList.remove("stop");
+      if (window.scrollY > ((0.2 * width) / 393) * logoHeight) {
+        light.classList.add("stop");
+      } else {
+        light.classList.remove("stop");
+      }
     }
   });
   //lightの止まり効果

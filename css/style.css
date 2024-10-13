@@ -594,14 +594,22 @@ footer {
 }
 .section__character {
   background-image: url(../img/kyara.png);
-  background-position: center;
+  background-position: top center;
+  background-size: auto 100%;
   /* padding-top: 80px;
   padding-bottom: 45px; */
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
+.section__character-img {
+  img {
+    position: relative;
+    left: 15px;
+  }
+}
+
 .section__character-text {
   color: #fff;
   font-family: "Yusei Magic";
@@ -649,7 +657,7 @@ footer {
     width: 90%;
     padding-top: 40px;
     display: block;
-    margin:0 auto;
+    margin: 0 auto;
   }
 }
 
@@ -841,6 +849,7 @@ footer {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    position: relative;
   }
 }
 .swiper {
@@ -954,7 +963,7 @@ footer {
   }
 }
 .section__voiceactor {
-  margin-bottom: 48px;
+  margin-bottom: 130px;
 }
 .section__voiceactor-list {
   padding-left: 24px;
@@ -1045,6 +1054,10 @@ footer {
 .section__executiveplan-item {
   padding-left: 54px;
   position: relative;
+  font-family: "Noto Sans JP";
+  font-weight: 500;
+  color: #3655a1;
+  font-size: 18px;
   &::before {
     position: absolute;
     content: "";
@@ -1258,7 +1271,6 @@ footer {
       padding-top: 20px;
       padding-left: 40px;
     }
-    padding-bottom: 100px;
   }
   .section__character-text {
     width: unset;
@@ -1488,22 +1500,22 @@ article {
     position: relative;
     border-radius: 10px;
   }
-  .member_photos4 {
-    height: 280px;
-    .member_photo {
-      max-width: 400px;
-      width: 80%;
-      img {
-        width: 100%;
-      }
-    }
-  }
   .member_photo {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 246px;
+    height: 340px;
   }
+  .member_photos4 {
+    height: 200px;
+
+    .member_photo {
+      height: 134px;
+    }
+  }
+
   .member_info {
     letter-spacing: 0.48px;
     line-height: 185%;
@@ -1558,13 +1570,19 @@ article {
 
   .member_grade {
     padding: 0 8%;
-    @media screen and (max-width: 360px) {
-      padding: 0 3%;
+    @media screen and (max-width: 345px) {
+      &::before {
+        content: "\A";
+        white-space: pre;
+      }
     }
-    @media screen and (min-width: 960px) and (max-width: 1024px) {
-      padding: 0 1%;
+    @media screen and (max-width: 393px) {
+      padding: 0 2%;
     }
-    @media screen and (min-width: 1024px) and (max-width: 1113px) {
+    @media screen and (min-width: 960px) and (max-width: 1040px) {
+      padding: 0 0.5%;
+    }
+    @media screen and (min-width: 1040px) and (max-width: 1113px) {
       padding: 0 4%;
     }
   }

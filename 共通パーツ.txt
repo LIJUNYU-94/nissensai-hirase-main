@@ -48,7 +48,7 @@
             <li><a href="">キャラクター紹介</a></li>
             <li><a href="">展示・出店</a></li>
             <li><a href="">声優トークショー</a></li>
-            <li><a href="">実行委員企画</a></li>
+            <li><a href="">校内ツアー</a></li>
             <li><a href="">注意事項</a></li>
           </ul>
           <ul>
@@ -77,7 +77,7 @@
             <li><a href="">キャラクター紹介</a></li>
             <li><a href="">展示・出展</a></li>
             <li><a href="">声優トークショー</a></li>
-            <li><a href="">実行委員企画</a></li>
+            <li><a href="">校内ツアー</a></li>
             <li><a href="">注意事項</a></li>
           </ul>
           <ul class="footer-ul footer-ul-ul2">
