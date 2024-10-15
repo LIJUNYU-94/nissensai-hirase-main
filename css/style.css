@@ -609,7 +609,7 @@ footer {
   }
   img {
     width: 100%;
-    animation: point 2s infinite;
+    animation: point 3s infinite;
   }
 }
 .keyvisual_light {
@@ -695,15 +695,35 @@ footer {
   flex-direction: column;
   gap: 20px;
   padding-bottom: 20px;
+  position: relative;
 }
 
 .section__character-img {
+  position: relative;
   img {
     position: relative;
     left: 15px;
   }
 }
-
+.section__character-stars {
+  .section__character-star {
+    width: 25%;
+    position: absolute;
+    animation: point 5s infinite;
+  }
+  .denchan_star1 {
+    top: 60%;
+    left: -30%;
+  }
+  .denchan_star2 {
+    top: -1%;
+    left: 110%;
+  }
+  .denchan_star3 {
+    top: 50%;
+    left: 130%;
+  }
+}
 .section__character-text {
   color: #fff;
   font-family: "Yusei Magic";
