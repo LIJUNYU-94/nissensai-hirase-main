@@ -33,6 +33,9 @@ if (
     if (slideText.includes("階")) {
       // 階があった場合
       newVariable = slideText.split("階")[0] + "F"; // 階字前の文字を取り出す、Fを追加する
+      if (newVariable === "B1F") {
+        newVariable = "B1";
+      }
     } else if (slideText.includes("館")) {
       // 階がなかった場合
       newVariable = slideText.split("館")[1]
@@ -40,8 +43,10 @@ if (
         : ""; // 館の後ろの文字を取り出す
     }
     if (newVariable === "メディアホール") {
-      currentFloor.style.fontSize = "36px";
-      currentFloor.style.bottom = "3px";
+      newVariable = "B1";
+      currentFloor.style.fontSize = "48px";
+      // currentFloor.style.fontSize = "36px";
+      // currentFloor.style.bottom = "3px";
     } else if (newVariable === "中庭") {
       currentFloor.style.fontSize = "40px";
       currentFloor.style.bottom = "2px";
@@ -237,6 +242,7 @@ links.forEach((link) => {
 const fixedBox = document.createElement("div");
 fixedBox.className = "fixedbox";
 document.body.appendChild(fixedBox);
+
 let width = window.innerWidth;
 let height = window.innerHeight;
 window.addEventListener("resize", function () {
@@ -267,7 +273,14 @@ function scroll() {
     });
   }); //backtotop機能
   let scrollTop = window.scrollY;
-
+  if (
+    !location.pathname.includes("/member") &&
+    !location.pathname.includes("/greeting")
+  ) {
+    fixedBox.style.backgroundColor = " rgba(46, 164, 222, 0.3)";
+  } else {
+    fixedBox.style.backgroundColor = " rgba(240, 250, 255, 0.7)";
+  }
   if (width > 640) {
     menuBtn.style.display = "none";
     if (scrollPosition > 300) {
