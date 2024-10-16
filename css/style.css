@@ -1,6 +1,6 @@
 @charset "utf-8";
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Megrim&family=Yusei+Magic&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Megrim&family=Yusei+Magic&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 /* --------------------------------------*
  * keyframes
  *-------------------------------------- */
@@ -165,7 +165,7 @@ section {
 }
 
 html {
-  font-family: "Noto sans JP", sans-serif;
+  font-family: 'Noto sans JP', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -264,6 +264,9 @@ b {
 .pc-only {
   display: none;
 }
+.sp-only {
+  display: block;
+}
 
 #sub-container {
   max-width: 640px;
@@ -272,7 +275,7 @@ b {
   background-color: #f0faff;
   position: relative;
   font-size: 16px;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .header-logo {
@@ -414,7 +417,7 @@ b {
   }
 
   ul:last-child::before {
-    content: "";
+    content: '';
     width: 74%;
     border-top: 2px solid #3655a1;
     position: absolute;
@@ -537,7 +540,7 @@ footer {
 .btn::after {
   position: absolute;
   right: 15px;
-  content: "";
+  content: '';
   width: 20px;
   height: 20px;
   mask-image: url(../img/btn-arrow.svg);
@@ -735,7 +738,7 @@ footer {
 }
 .section__character-text {
   color: #fff;
-  font-family: "Yusei Magic";
+  font-family: 'Yusei Magic';
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -803,7 +806,7 @@ footer {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "Yusei Magic";
+  font-family: 'Yusei Magic';
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
@@ -812,7 +815,7 @@ footer {
   padding-left: 6%;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     width: 100px;
@@ -826,7 +829,7 @@ footer {
   }
 
   span {
-    font-family: "Yusei Magic";
+    font-family: 'Yusei Magic';
     font-size: 36px;
     font-style: normal;
     font-weight: 400;
@@ -889,7 +892,7 @@ footer {
 .section__stalls-btn {
   color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  font-family: "Zen Maru Gothic";
+  font-family: 'Zen Maru Gothic';
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -935,7 +938,7 @@ footer {
 
 .section__stalls-btn--info {
   &::after {
-    content: "";
+    content: '';
   }
 }
 
@@ -1035,7 +1038,7 @@ footer {
 
 .swiper-button-prev {
   &::after {
-    content: "";
+    content: '';
     background: url(../img/prev.svg) center;
     /* background-size: 99%; */
   }
@@ -1043,7 +1046,7 @@ footer {
 
 .swiper-button-next {
   &::after {
-    content: "";
+    content: '';
     background: url(../img/next.svg) center;
     background-size: 99%;
   }
@@ -1098,7 +1101,7 @@ footer {
 
 .slide__txt {
   color: var(--clr-blue);
-  font-family: "Noto Sans JP";
+  font-family: 'Noto Sans JP';
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -1135,7 +1138,7 @@ footer {
 .section__voiceactor-item {
   list-style: disc;
   color: #3655a1;
-  font-family: "Noto Sans JP";
+  font-family: 'Noto Sans JP';
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1166,6 +1169,28 @@ footer {
     width: 56vw;
   } */
 }
+.section__voiceactor-case {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.section__voiceactor-txt {
+  font-size: 16px;
+  font-weight: 700;
+  color: #3655a1;
+  &.right {
+    text-align: right;
+  }
+}
+.section__voiceactor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
 
 .section__executiveplan {
   padding-bottom: 30px;
@@ -1173,7 +1198,7 @@ footer {
   position: relative;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     width: 100px;
@@ -1226,14 +1251,14 @@ footer {
 .section__executiveplan-item {
   padding-left: 54px;
   position: relative;
-  font-family: "Noto Sans JP";
+  font-family: 'Noto Sans JP';
   font-weight: 500;
   color: #3655a1;
   font-size: 18px;
 
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     display: block;
     width: 38px;
     height: 38px;
@@ -1345,7 +1370,7 @@ footer {
 
   &::after {
     position: absolute;
-    content: "";
+    content: '';
     width: 60px;
     height: 60px;
     bottom: 0;
@@ -1522,6 +1547,35 @@ footer {
     font-size: 36px;
     width: 440px;
     padding-block: 8px;
+  }
+
+  .section__voiceactor-img {
+    flex-basis: 40%;
+    img {
+      width: 100%;
+    }
+  }
+  .section__voiceactor-case {
+    flex-basis: 60%;
+  }
+
+  .section__voiceactor-txt {
+    font-size: 16px;
+    font-weight: 700;
+    color: #3655a1;
+    &.right {
+      text-align: right;
+    }
+  }
+  .section__voiceactor-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+  .section__voiceactor-content {
+    flex-direction: row;
   }
 
   @media screen and (min-width: 850px) {
@@ -1862,7 +1916,7 @@ article {
 
     @media screen and (max-width: 345px) {
       &::before {
-        content: "\A";
+        content: '\A';
         white-space: pre;
       }
     }
@@ -1915,6 +1969,9 @@ article {
   .pc-only {
     display: block;
   }
+  .sp-only {
+    display: none;
+  }
 
   .phone-only {
     display: none;
@@ -1938,15 +1995,15 @@ article {
       grid-template-columns: 46% 35.5% 18.5%;
       grid-template-rows: 160px auto 200px;
       grid-template-areas:
-        "logo  ul1 ul2"
-        "btn   ul1 ul2"
-        "copyr ul1 ul2";
+        'logo  ul1 ul2'
+        'btn   ul1 ul2'
+        'copyr ul1 ul2';
 
       .footer-logo {
         position: relative;
         bottom: 10px;
         width: 100%;
-        grid-area: "logo";
+        grid-area: 'logo';
         padding: 0;
 
         img {
@@ -1967,11 +2024,11 @@ article {
       }
 
       .footer-ul-ul1 {
-        grid-area: "ul1";
+        grid-area: 'ul1';
       }
 
       .footer-ul-ul2 {
-        grid-area: "ul2";
+        grid-area: 'ul2';
         margin: 0;
       }
 
