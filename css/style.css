@@ -726,11 +726,11 @@ footer {
   }
   .denchan_star2 {
     top: -1%;
-    left: 100%;
+    left: 20%;
   }
   .denchan_star3 {
     top: 50%;
-    left: 110%;
+    left: 85%;
   }
 }
 .section__character-text {
@@ -2030,7 +2030,6 @@ article {
 
 @media screen and (min-width: 640px) and (max-width: 1179px) {
   .greeting_img {
-    display: block;
     margin: 0 auto;
   }
 
@@ -2046,10 +2045,10 @@ article {
 @media screen and (min-width: 1180px) {
   .greeting {
     width: 68.7%;
-    gap: 0 160px;
+    /* gap: 0 160px; */
 
     h3 {
-      padding-left: 0;
+      padding-left: 20%;
       font-size: 48px;
       font-weight: 700;
     }
