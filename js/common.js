@@ -9,6 +9,7 @@ if (
   const currentFloor = document.querySelector(".section__stalls-currentfloor");
   const buttons = [...document.querySelectorAll(".section__stalls-btn")];
   const swipers = [...document.querySelectorAll(".swiper")];
+  const swiperInstances = [];
   //階数によって文字変わる関数↓
   function swiperFlex() {
     const flexSwiper = swipers.find(
@@ -60,11 +61,27 @@ if (
       currentFloor.innerHTML = newVariable;
     }
   }
-  //階数によって文字変わる関数↑
+  function updateNavigationButtons(swiper) {
+    const nextButton = document.querySelector(".swiper-button-next");
+    const prevButton = document.querySelector(".swiper-button-prev");
+
+    // スライドが最初か最後かを確認
+    if (swiper.isBeginning) {
+      prevButton.classList.add("swiper-button-disabled");
+    } else {
+      prevButton.classList.remove("swiper-button-disabled");
+    }
+
+    if (swiper.isEnd) {
+      nextButton.classList.add("swiper-button-disabled");
+    } else {
+      nextButton.classList.remove("swiper-button-disabled");
+    }
+  }
   document.addEventListener("DOMContentLoaded", function () {
     // Swiperのスライド要素をすべて取得
-    swipers.forEach((swiperElement) => {
-      new Swiper(swiperElement, {
+    swipers.forEach((swiperElement, index) => {
+      const swiper = new Swiper(swiperElement, {
         loop: false,
         spaceBetween: 12,
         width: 300,
@@ -72,13 +89,17 @@ if (
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        simulateTouch: true, // タッチイベントをシミュレート
+        allowTouchMove: true, // スワイプを許可
         on: {
           slideChangeTransitionEnd: function () {
             // スライドが変わった時にswiperFlexを実行
             swiperFlex();
+            updateNavigationButtons(this); // ボタンの状態を更新
           },
         },
       });
+      swiperInstances[index] = swiper; // 各インスタンスを配列に保存
     });
 
     // const swiper = new Swiper(".swiper", {
@@ -119,6 +140,12 @@ if (
           x.style.display = "none";
         });
         swipers[index].style.display = "flex"; // 対応するラッパーを表示
+        updateNavigationButtons(swiperInstances[0]); // ボタンの状態を初期化
+        const currentSwiper = swiperInstances[index];
+        if (currentSwiper) {
+          // スライドを変更
+          currentSwiper.slideTo(0); // スライドの位置をリセット
+        }
         let wrapper = swipers[index].querySelector(".swiper-wrapper");
         wrapper.style.transform = "translate3d(0px, 0px, 0px)";
         if (index === 4 || index === 3) {
