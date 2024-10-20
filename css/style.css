@@ -690,6 +690,7 @@ footer {
   gap: 60px;
   padding-top: 20px;
   padding-bottom: 120px;
+  z-index: 8;
 }
 
 .section__catchphrase-text {
@@ -1503,8 +1504,19 @@ footer {
   }
 
   .section__catchphrase {
-    z-index: 8;
-
+    &::before {
+      content: "";
+      background-image: url(../img/yake.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      opacity: 1;
+    }
     .section__ttl {
       padding-left: 40px;
     }
