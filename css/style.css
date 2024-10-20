@@ -642,7 +642,7 @@ footer {
 .keyvisual_smoke {
   width: 100%;
   position: absolute;
-  top: 23.5%;
+  bottom: 0;
 
   @media screen and (min-width: 440px) and (max-width: 640px) {
     top: 26%;
@@ -662,10 +662,16 @@ footer {
 }
 
 .section__event {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   gap: 90px;
   padding-bottom: 180px;
+  background-image: url(../img/phonekv0.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
 
   img {
     width: auto;
@@ -1460,21 +1466,6 @@ footer {
 }
 
 @media screen and (min-width: 640px) {
-  .keyvisual_smoke {
-    top: 32%;
-
-    @media screen and (min-width: 640px) and (max-width: 960px) {
-      top: 27%;
-    }
-
-    @media screen and (min-width: 960px) and (max-width: 1280px) {
-      top: 30%;
-    }
-
-    img {
-      width: 100%;
-    }
-  }
   .keyvisual_star {
     width: 4%;
     left: 46.5%;
@@ -1486,13 +1477,17 @@ footer {
     }
   }
   .section__event {
-    position: absolute;
-    bottom: -400px;
+    background-image: url(../img/pckv01.png), url(../img/pckv02.png);
+    background-size: 100%, 100%;
+    background-repeat: no-repeat, repeat;
+    background-position: top, left 0 top 10px;
     width: 100%;
     padding-inline: 40px;
     padding-bottom: 100px;
     gap: 64px;
-
+    @media screen and (max-width: 700px) {
+      padding-inline: 20px;
+    }
     img {
       width: auto;
     }

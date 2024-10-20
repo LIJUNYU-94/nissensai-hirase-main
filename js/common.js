@@ -200,13 +200,13 @@ if (
     logoHeight = logo.offsetHeight;
     const width = window.innerWidth;
     if (width >= 640) {
-      if (window.scrollY > ((0.4 * width) / 1280) * logoHeight) {
+      if (window.scrollY > ((0.8 * width) / 1280) * logoHeight) {
         light.classList.add("stop");
       } else {
         light.classList.remove("stop");
       }
     } else {
-      if (window.scrollY > ((0.2 * width) / 393) * logoHeight) {
+      if (window.scrollY > ((0.6 * width) / 393) * logoHeight) {
         light.classList.add("stop");
       } else {
         light.classList.remove("stop");
