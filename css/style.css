@@ -896,7 +896,10 @@ footer {
   outline-width: 1px;
   outline-offset: 7px;
   position: relative;
-
+  &:hover {
+    box-shadow: 2px 3px 7px 0px #a5abf1;
+    border-radius: 30px;
+  }
   img {
     width: 100%;
     padding: 26px 11px;
