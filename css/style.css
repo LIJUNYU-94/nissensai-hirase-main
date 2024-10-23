@@ -378,7 +378,7 @@ b {
   font-weight: 700;
 }
 
-  ul {
+.pc-nav ul {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
