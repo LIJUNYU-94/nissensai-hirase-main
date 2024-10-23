@@ -227,7 +227,7 @@ if (
     logoHeight = logo.offsetHeight;
     const width = window.innerWidth;
     if (width >= 640) {
-      if (window.scrollY > ((0.8 * width) / 1280) * logoHeight) {
+      if (window.scrollY > ((0.5 * width) / 1280) * logoHeight) {
         light.classList.add("stop");
       } else {
         light.classList.remove("stop");
@@ -269,6 +269,15 @@ links.forEach((link) => {
 const fixedBox = document.createElement("div");
 fixedBox.className = "fixedbox";
 document.body.appendChild(fixedBox);
+if (
+  !location.pathname.includes("/member") &&
+  !location.pathname.includes("/greeting")
+) {
+  fixedBox.style.backgroundColor = " rgba(255, 255, 255, 0.6)";
+} else {
+  fixedBox.style.backgroundColor = " rgba(240, 250, 255, 0.7)";
+}
+fixedBox.style.display = "block";
 
 let width = window.innerWidth;
 let height = window.innerHeight;
@@ -300,56 +309,49 @@ function scroll() {
     });
   }); //backtotop機能
   let scrollTop = window.scrollY;
-  if (
-    !location.pathname.includes("/member") &&
-    !location.pathname.includes("/greeting")
-  ) {
-    fixedBox.style.backgroundColor = " rgba(46, 164, 222, 0.3)";
-  } else {
-    fixedBox.style.backgroundColor = " rgba(240, 250, 255, 0.7)";
-  }
-  if (width > 640) {
-    menuBtn.style.display = "none";
-    if (scrollPosition > 300) {
-      if (scrollTopBefore > scrollTop) {
-        fixedBox.style.display = "block"; // ボックスを表示
-        logo.style.display = "block";
-        navPC.style.display = "block";
-      } else {
-        fixedBox.style.display = "none"; // ボックスを非表示
-        logo.style.display = "none";
-        navPC.style.display = "none";
-      }
-    } else {
-      fixedBox.style.display = "none"; // ボックスを非表示
-      logo.style.display = "block";
-      navPC.style.display = "block";
-    }
-  } else {
-    navPC.style.display = "none";
-    if (scrollPosition / documentHeight > 0.8) {
-      fixedBox.style.display = "none";
-      menuBtn.style.display = "none";
-      logo.style.display = "none";
-    } else {
-      if (scrollPosition > 300) {
-        if (scrollTopBefore > scrollTop) {
-          fixedBox.style.display = "block"; // ボックスを表示
-          logo.style.display = "block";
-          menuBtn.style.display = "flex";
-        } else {
-          fixedBox.style.display = "none"; // ボックスを非表示
-          logo.style.display = "none";
-          menuBtn.style.display = "none";
-        }
-      } else {
-        fixedBox.style.display = "none"; // ボックスを非表示
-        logo.style.display = "block";
-        menuBtn.style.display = "flex";
-      }
-    }
-  }
-  scrollTopBefore = scrollTop;
+
+  // if (width > 640) {
+  //   menuBtn.style.display = "none";
+  //   if (scrollPosition > 300) {
+  //     if (scrollTopBefore > scrollTop) {
+  //       fixedBox.style.display = "block"; // ボックスを表示
+  //       logo.style.display = "block";
+  //       navPC.style.display = "block";
+  //     } else {
+  //       fixedBox.style.display = "none"; // ボックスを非表示
+  //       logo.style.display = "none";
+  //       navPC.style.display = "none";
+  //     }
+  //   } else {
+  //     fixedBox.style.display = "none"; // ボックスを非表示
+  //     logo.style.display = "block";
+  //     navPC.style.display = "block";
+  //   }
+  // } else {
+  //   navPC.style.display = "none";
+  //   if (scrollPosition / documentHeight > 0.8) {
+  //     fixedBox.style.display = "none";
+  //     menuBtn.style.display = "none";
+  //     logo.style.display = "none";
+  //   } else {
+  //     if (scrollPosition > 300) {
+  //       if (scrollTopBefore > scrollTop) {
+  //         fixedBox.style.display = "block"; // ボックスを表示
+  //         logo.style.display = "block";
+  //         menuBtn.style.display = "flex";
+  //       } else {
+  //         fixedBox.style.display = "none"; // ボックスを非表示
+  //         logo.style.display = "none";
+  //         menuBtn.style.display = "none";
+  //       }
+  //     } else {
+  //       fixedBox.style.display = "none"; // ボックスを非表示
+  //       logo.style.display = "block";
+  //       menuBtn.style.display = "flex";
+  //     }
+  //   }
+  // }
+  // scrollTopBefore = scrollTop;
 
   const path = window.location.pathname;
 

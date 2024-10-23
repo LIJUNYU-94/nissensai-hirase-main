@@ -26,10 +26,10 @@
   <body>
     <header>
       <a href="index.html">
-        <img class="header-logo" src="img/logo.svg" alt="日専祭2024ロゴ"
+        <img class="header-logo" src="img/header-logo.svg" alt="日専祭2024ロゴ"
       /></a>
 
-      <nav class="pc-nav pc-only pc-nav-hp">
+      <nav class="pc-nav pc-only">
         <ul>
           <li class="pc-nav-active"><a href="index.html">TOP</a></li>
           <li class="pc-nav-li"><a href="greeting/index.html">ご挨拶</a></li>
@@ -70,9 +70,9 @@
           <picture>
             <!-- <source media="(min-width: 1280px)" srcset="./img/pckv11.png" />
             <source media="(min-width: 960px)" srcset="./img/pckv111.png" /> -->
-            <source media="(min-width: 640px)" srcset="./img/pckv0.png" />
+            <source media="(min-width: 640px)" srcset="./img/bg_pc1.png" />
             <!-- <source media="(min-width: 440px)" srcset="./img/phonekv11.png" /> -->
-            <img src="./img/phonekv111.png" alt="kv背景" />
+            <img src="./img/bg_sp.png" alt="kv背景" />
           </picture>
           <!-- <img src="./img/pckv11.png" alt="kv背景" /> -->
           <div class="keyvisual_star">
@@ -91,7 +91,7 @@
 
           <div class="keyvisual_smoke">
             <picture>
-              <source media="(min-width: 640px)" srcset="./img/ROCKET.png" />
+              <source media="(min-width: 640px)" srcset="./img/rocket1.png" />
               <img src="./img/phonekv3.png" alt="煙+ロケット" />
             </picture>
           </div>
@@ -125,7 +125,7 @@
           <a href="greeting/index.html" class="btn btn--gradation"
             >理事長校長のご挨拶</a
           >
-          <a href="member/index.html" class="btn btn--simple">制作者紹介</a>
+          <a href="member/index.html" class="btn btn--gradation">制作者紹介</a>
         </div>
       </section>
       <section class="section__catchphrase" id="catchphrase">
@@ -170,12 +170,7 @@
               alt="きらきら星"
             />
           </div>
-          <img
-            src="./img/denchan.png"
-            alt="でんちゃん"
-            width="250"
-            height="320"
-          />
+          <img src="./img/tennchan.png" alt="でんちゃん" />
         </picture>
         <div class="btn__container section__character-btn">
           <a href="member/index.html#dennchan" class="btn btn--gradation"
@@ -192,11 +187,20 @@
             <span>日専祭では、</span><br />
             本館、4号館、5号館、7号館、9号館にわかれ、<br />展示や体験型のワークショップ等を行っています。<br />是非、お楽しみください
           </p>
-          <picture class="section__stalls-img pc-only">
-            <a href="./img/map.svg" data-lightbox="pc"
-              ><img src="./img/access.png" alt="会場図"
-            /></a>
-          </picture>
+          <div class="section__stalls-img--container phone-only">
+            <picture class="section__stalls-img">
+              <a href="./img/map.svg" data-lightbox="pc"
+                ><img src="./img/small_map.png" alt="会場図"
+              /></a>
+            </picture>
+          </div>
+          <div class="section__stalls-img--container pc-only">
+            <picture class="section__stalls-img">
+              <a href="./img/map.svg" data-lightbox="pc"
+                ><img src="./img/small_map.png" alt="会場図"
+              /></a>
+            </picture>
+          </div>
         </div>
 
         <div class="section__stalls-exhibition">
@@ -255,7 +259,7 @@
             </ul>
           </div>
 
-          <div class="section__stalls-current">
+          <div class="section__stalls-current phone-only">
             <div class="swiper-button-prev"></div>
             <p class="section__stalls-currentfloor">B1</p>
             <div class="swiper-button-next"></div>
