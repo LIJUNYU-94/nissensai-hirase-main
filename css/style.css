@@ -1794,8 +1794,8 @@ footer small {
     margin-top: 40px;
   }
 
-  .section__voiceactor,
-  .section__executiveplan,
+  .section__voiceactor .section__ttl,
+  .section__executiveplan .section__ttl,
   .section__precautions .section__ttl {
     left: 3.25%;
   }
