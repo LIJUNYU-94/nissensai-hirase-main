@@ -1545,7 +1545,9 @@ footer small {
 .section__precautions-item {
   list-style: disc;
 }
-
+.section__precautions-item a {
+  color: #ffffff;
+}
 @media screen and (min-width: 640px) {
   .keyvisual_star {
     width: 5%;
